@@ -1,6 +1,22 @@
+/*
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'bronze' schema from the bronze layer. 
+    It performs the following actions:
+    - Truncates the silver table.
+    - Insert, Transform, Normalize and Cleaned the date from Bronze layer to silver layer.
 
+Parameters:
+    None. 
+	  This stored procedure does not accept any parameters or return any values.
 
-EXEC silver.load_silver;
+Usage Example:
+    EXEC silver.load_bronze;
+===============================================================================
+*/
+
 
 CREATE OR ALTER PROCEDURE silver.load_silver AS 
 BEGIN
